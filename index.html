@@ -1,1 +1,36 @@
-<iframe src="1000 多本计算机电子书免费下载.md" width="100%" height="500px"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Markdown in HTML</title>
+    <!-- 引入 marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@2.0.1"></script>
+</head>
+<body>
+    <div id="content" style="display: none;"></div>
+    
+    <script>
+        // 使用 AJAX 或 Fetch API 从服务器加载 Markdown 文件的内容
+        
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '1000 多本计算机电子书免费下载.md');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var markdownContent = xhr.responseText;
+                
+                // 使用 marked.js 将 Markdown 转换成 HTML
+                var htmlContent = marked(markdownContent);
+                
+                // 将生成的 HTML 添加到指定的 div 元素中
+                document.getElementById("content").innerHTML = htmlContent;
+                
+                // 显示已经处理好的内容
+                document.getElementById("content").style.display = "block";
+            } else {
+                console.error('Error loading file: ', xhr.statusText);
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+</html>
