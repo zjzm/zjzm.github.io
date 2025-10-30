@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.B-XtCDNB.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"summarize/index.md","filePath":"summarize/index.md"}'),r={name:"summarize/index.md"};function n(s,i,o,c,m,d){return a(),t("div")}const f=e(r,[["render",n]]);export{_ as __pageData,f as default};
